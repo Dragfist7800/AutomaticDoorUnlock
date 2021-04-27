@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+   <title>Automatic door unlock</title>
+   <meta charset="utf-8">
+     <script src="eel.js"></script>
+     <link href="main.css" rel="Stylesheet">
+     <script src="main.js"></script>
+   <meta name="keywords" content="door,unlock system">
+
+</head>
+
+<body>
+
+    <div class="grid-wrapper">
+        <div class="sk-grid">
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+      <div class="sk-grid-cube"></div>
+        </div>
+    </div>
+
+   <div id="main">
+      <header>
+      <h1>Welcome to Research and Development Cell</h1>
+     </header>
+
+
+     <div id="video-content">
+     <video height="400" width="400" id="vid"></video>
+    </div>
+    <br>
+    <div id="buttons">
+
+    <button type="button" class="btn btn-primary btn-lg raised" id="regBtn" onclick="openFrom()">Register</button>
+    <button type="button" class="btn btn-primary btn-lg raised" id="unlockBtn" onclick="unlockBtn()">Unlock door</button>
+    <button type="button" class="btn btn-primary btn-lg raised" id="f_unlockBtn" onclick="f_unlockBtn()">force unlock</button>
+
+    </div>
+
+
+    <div id="inside">
+     <p  style="display:inline; color:white" id="prev">prev</p>
+     <div class="preview">
+        <img src="B:/Code/Projects/Face-detection-Lock/EEL version/Design/background1.jpeg" width="70" height="50" class="active thumbnail">
+        <img src="B:\Code\Projects\Face-detection-Lock\EEL version\Design\background2.jpeg" width="70" height="50" class="thumbnail" >
+	<img src="B:\Code\Projects\Face-detection-Lock\EEL version\Design\background3.jpeg" width="70" height="50" class="thumbnail" >
+	<img src="B:\Code\Projects\Face-detection-Lock\EEL version\Design\background4.jpeg" width="70" height="50" class="thumbnail" >
+        <img src="B:\Code\Projects\Face-detection-Lock\EEL version\Design\background5.jpeg" width="70" height="50" class="thumbnail" >
+     </div>
+    <p style="display:inline;color:white" id="next">next</p>
+    </div>
+
+
+
+     </div>
+   </div>
+
+  </div>
+
+    <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h2>Register</h2>
+
+    <label for="id"><b>Id</b></label>
+    <input id="id" type="text" placeholder="Enter your ID" name="id" required>
+
+    <label for="name"><b>Name</b></label>
+    <input id="name" type="text" placeholder="Enter your Name" name="name" required>
+
+    <button type="button" class="sub-btn" onclick="regBtn()">Submit</button>
+  </form>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>

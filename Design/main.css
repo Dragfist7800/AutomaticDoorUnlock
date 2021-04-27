@@ -1,0 +1,425 @@
+/*****************************
+       MAIN PAGE TITLE
+******************************/
+h1 {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+/*****************************
+     MAIN PAGE BACKGROUND
+******************************/
+body{
+    background: url("Main_background.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*****************************
+        POP-UP FROM STYLE
+******************************/
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .sub-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .sub-btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+#video-content
+{
+    width:50%;
+    border-color:red;
+    border-width:5px;
+    border-style:solid;
+    border-radius:30px;
+    margin-left:20vw;
+    margin-top:10vh;
+    backdrop-filter:blur(10px);
+    background:transparent;
+    margin: 0 auto;
+}
+
+
+
+#buttons
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+ h3
+{
+  display:inline-block;
+  border-style:solid;
+  border-color:black;
+  padding:4px;
+
+}
+.preview
+{
+
+  margin-left:20vw;
+  opacity: 0.4;
+
+}
+
+.preview .active
+{
+  width:500px;
+  border: 3px solid #fff;
+   opacity: 1;
+  height:300px;
+
+}
+
+#next
+{
+  cursor:pointer;
+}
+
+#prev
+{
+
+  cursor:pointer;
+}
+
+  #inside
+  {
+   margin-top:12vh;
+
+  }
+
+/***************************************************
+  DEFAULT BOOTSTRAP STYLES FOR THE MAIN PAGE BUTTONS
+****************************************************/
+
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+
+/******************************************
+  RAISED BUTTONS FOR THE MAIN PAGE BUTTONS
+*******************************************/
+.btn-primary.raised {
+  box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+  background: #33a6cc;
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+
+
+/************************************
+  CUSTOM BTN VALUES MAIN PAGE BUTTONS
+*************************************/
+
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+
+.btn-primary {
+  background: #0099cc;
+  color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+  background: #007299;
+  box-shadow: none;
+}
+
+
+
+
+/*****************************
+        MEDIA QUERIES
+******************************/
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+}
+
+}
+
+
+
+/*****************************
+        Loading
+******************************/
+/*.grid-wrapper {
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background-color: #9614EA;
+
+}
+
+
+/* Config */
+:root {
+  --sk-size: 40px;
+  --sk-color: #242f3f;
+}
+
+
+.sk-grid {
+  position: fixed;
+  width: var(--sk-size);
+  height: var(--sk-size);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 3px solid #f1f1f1;*/
+  z-index: 9;
+  background-color: #9614EA;
+  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
+  /* Cube positions
+   * 1 2 3
+   * 4 5 6
+   * 7 8 9
+   */
+ }
+.sk-grid-cube {
+    width: 33.33%;
+    height: 33.33%;
+    background-color: var(--sk-color);
+    float: left;
+    animation: sk-grid 1.3s infinite ease-in-out;
+}
+.sk-grid-cube:nth-child(1) { animation-delay: 0.2s; }
+.sk-grid-cube:nth-child(2) { animation-delay: 0.3s; }
+.sk-grid-cube:nth-child(3) { animation-delay: 0.4s; }
+.sk-grid-cube:nth-child(4) { animation-delay: 0.1s; }
+.sk-grid-cube:nth-child(5) { animation-delay: 0.2s; }
+.sk-grid-cube:nth-child(6) { animation-delay: 0.3s; }
+.sk-grid-cube:nth-child(7) { animation-delay: 0.0s; }
+.sk-grid-cube:nth-child(8) { animation-delay: 0.1s; }
+.sk-grid-cube:nth-child(9) { animation-delay: 0.2s; }
+
+@keyframes sk-grid {
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1);
+  } 35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+*/
