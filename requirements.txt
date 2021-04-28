@@ -1,0 +1,6 @@
+pandas
+numpy
+opencv-contrib-python
+Pillow
+yagmail
+eel
