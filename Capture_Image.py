@@ -34,14 +34,16 @@ def takeImages(regId, regName):
     print("taking Image......")
 
     if (name.isalpha()):
-        cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        cam = cv2.VideoCapture(0)
         harcascadePath = "haarcascade_frontalface_default.xml"
         faceCascade = cv2.CascadeClassifier(harcascadePath)
         sampleNum = 0
 
         while (True):
             ret, img = cam.read()
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            print(img)
+            gray = cv2.cvtColor(img[1], cv2.COLOR_BGR2GRAY)
+            img = np.array(img)
             faces = faceCascade.detectMultiScale(
                 gray,
                 scaleFactor=1.2,
