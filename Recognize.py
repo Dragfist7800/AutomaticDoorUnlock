@@ -22,6 +22,7 @@ def sendMail(img):
         contents="This person is requesting access to R & D cell",  # email body
         attachments=img  # file attached
     )
+    print('Unrecognized Face')
     print("Email Sent!")
 
 def recognize_face():
@@ -64,9 +65,10 @@ def recognize_face():
             # Check if confidence is less them 100 ==> "0" is perfect match
             if k == 27:
                 break
-            if (confidence <=40 ):
+            if (confidence > 60 ):
                 nm = df.loc[df['Id'] == id]['Name'].values
                 confidence = "  {0}%".format(round(100 - confidence))
+                print("Welcome " + nm[0])
                 print("Opening Lock")
                 exit(0)
             else:
@@ -74,7 +76,7 @@ def recognize_face():
                 confidence = "  {0}%".format(round(100 - confidence))
                 cv2.imwrite("Impostor.jpg",img)
                 start_time = time.time()
-                seconds = 10
+                seconds = 20
                 while True:
                     current_time = time.time()
                     elapsed_time = current_time - start_time
