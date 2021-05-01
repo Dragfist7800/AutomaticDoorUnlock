@@ -42,6 +42,8 @@ def recognize_face():
     # Define min window size to be recognized as a face
     minW = 0.1*cam.get(3)
     minH = 0.1*cam.get(4)
+    start_time = time.time()
+    seconds = 20
     while True:
         ret = cam.read()
         img = cam.read()
@@ -54,8 +56,11 @@ def recognize_face():
             minNeighbors = 5,
             minSize = (int(minW), int(minH)),
            )
-        
+        current_time = time.time()
+        elapsed_time = current_time - start_time
+
         for(x,y,w,h) in faces:
+
             cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2)
             confidence: object
             id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
@@ -65,7 +70,7 @@ def recognize_face():
             # Check if confidence is less them 100 ==> "0" is perfect match
             if k == 27:
                 break
-            if (confidence > 60 ):
+            if (confidence <= 40 ):
                 nm = df.loc[df['Id'] == id]['Name'].values
                 confidence = "  {0}%".format(round(100 - confidence))
                 print("Welcome " + nm[0])
@@ -75,24 +80,15 @@ def recognize_face():
                 id = "unknown"
                 confidence = "  {0}%".format(round(100 - confidence))
                 cv2.imwrite("Impostor.jpg",img)
-                start_time = time.time()
-                seconds = 20
-                while True:
-                    current_time = time.time()
-                    elapsed_time = current_time - start_time
-
-                    if elapsed_time > seconds:
-                        sendMail("Impostor.jpg");
-                        exit(0)
             cv2.putText(img, str(id), (x+5,y-5), font, 1, (255,255,255), 2)
             cv2.putText(img, str(confidence), (x+5,y+h-5), font, 1, (255,255,0), 1)
         cv2.imshow('unlock',img)
         k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
-        if k == 27:
+        if k == 27 or elapsed_time >= seconds:
+            print("\n [INFO] Exiting Program and cleanup stuff")
+            sendMail("Impostor.jpg")
+            cam.release()
+            cv2.destroyAllWindows()
             break
-    # Do a bit of cleanup
-    print("\n [INFO] Exiting Program and cleanup stuff")
-    cam.release()
-    cv2.destroyAllWindows()
 
 
